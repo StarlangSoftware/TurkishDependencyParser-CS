@@ -1,0 +1,14 @@
+namespace DependencyParser
+{
+    /**
+     * <summary>Enumerator class for Turkish Dependency tags</summary>
+     */
+    public enum TurkishDependencyType
+    {
+        VOCATIVE, SUBJECT, DATIVE_ADJUNCT, OBJECT, POSSESSOR,
+        MODIFIER, S_MODIFIER, ABLATIVE_ADJUNCT, DETERMINER, SENTENCE,
+        CLASSIFIER, LOCATIVE_ADJUNCT, COORDINATION, QUESTION_PARTICLE, INTENSIFIER,
+        INSTRUMENTAL_ADJUNCT, RELATIVIZER, NEGATIVE_PARTICLE, ETOL, COLLOCATION,
+        FOCUS_PARTICLE, EQU_ADJUNCT, APPOSITION, NONE
+    }
+}
