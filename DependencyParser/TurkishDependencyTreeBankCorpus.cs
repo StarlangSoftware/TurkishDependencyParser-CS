@@ -34,7 +34,9 @@ namespace DependencyParser
         public TurkishDependencyTreeBankCorpus(string fileName)
         {
             var doc = new XmlDocument();
-            doc.Load(fileName);
+            var assembly = typeof(TurkishDependencyTreeBankCorpus).Assembly;
+            var stream = assembly.GetManifestResourceStream("DependencyParser." + fileName);
+            doc.Load(stream);
             foreach (XmlNode sentenceNode in doc.ChildNodes[0])
             {
                 var sentence = new TurkishDependencyTreeBankSentence(sentenceNode);

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>NlpToolkit-DependencyParser</PackageId>
+        <PackageVersion>1.0.2</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NlpToolkit-MorphologicalAnalysis" Version="1.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="metu-treebank.xml" />
+      <EmbeddedResource Include="metu-treebank.xml" />
+    </ItemGroup>
+
+</Project>
