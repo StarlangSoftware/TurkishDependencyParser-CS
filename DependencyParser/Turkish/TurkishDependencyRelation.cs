@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Turkish
 {
     public class TurkishDependencyRelation : DependencyRelation
     {
@@ -53,7 +53,7 @@ namespace DependencyParser
          * <summary>Another constructor for TurkishDependencyRelation. Gets input toWord, toIG, and dependencyType as arguments and
          * calls the super class's constructor and sets the IG and dependency type.</summary>
          * <param name="toWord">Index of the word in the sentence that dependency relation is related</param>
-         * <param name="toIG">Index of the inflectional group the dependency relation is related</param>
+         * <param name="toIg">Index of the inflectional group the dependency relation is related</param>
          * <param name="dependencyType">Type of the dependency relation in string form</param>
          */
         public TurkishDependencyRelation(int toWord, int toIg, string dependencyType) : base(toWord)

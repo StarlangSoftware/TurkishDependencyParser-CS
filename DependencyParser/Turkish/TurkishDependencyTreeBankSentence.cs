@@ -1,7 +1,7 @@
 using System.Xml;
 using Corpus;
 
-namespace DependencyParser
+namespace DependencyParser.Turkish
 {
     public class TurkishDependencyTreeBankSentence : Sentence
     {

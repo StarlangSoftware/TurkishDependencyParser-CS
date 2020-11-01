@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Stanford
 {
     public class StanfordDependencyRelation : DependencyRelation
     {

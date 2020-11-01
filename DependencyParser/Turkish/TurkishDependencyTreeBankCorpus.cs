@@ -4,7 +4,7 @@ using Corpus;
 using DataStructure;
 using Dictionary.Dictionary;
 
-namespace DependencyParser
+namespace DependencyParser.Turkish
 {
     public class TurkishDependencyTreeBankCorpus : Corpus.Corpus
     {

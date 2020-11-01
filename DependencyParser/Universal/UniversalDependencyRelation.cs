@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Universal
 {
     public class UniversalDependencyRelation : DependencyRelation
     {
@@ -35,6 +35,22 @@ namespace DependencyParser
             UniversalDependencyType.VOCATIVE, UniversalDependencyType.XCOMP, UniversalDependencyType.NONE
         };
 
+        private static readonly string[] universalDependencyPosTypes =
+        {
+            "ADJ", "ADV", "INTJ", "NOUN", "PROPN", "VERB", "ADP", "AUX", "CCONJ", "DET", "NUM", "PART", "PRON",
+            "SCONJ", "PUNCT", "SYM", "X"
+        };
+
+        private static readonly UniversalDependencyPosType[] universalDependencyPosTags =
+        {
+            UniversalDependencyPosType.ADJ, UniversalDependencyPosType.ADV, UniversalDependencyPosType.INTJ,
+            UniversalDependencyPosType.NOUN, UniversalDependencyPosType.PROPN, UniversalDependencyPosType.VERB,
+            UniversalDependencyPosType.ADP, UniversalDependencyPosType.AUX, UniversalDependencyPosType.CCONJ,
+            UniversalDependencyPosType.DET, UniversalDependencyPosType.NUM, UniversalDependencyPosType.PART,
+            UniversalDependencyPosType.PRON, UniversalDependencyPosType.SCONJ, UniversalDependencyPosType.PUNCT,
+            UniversalDependencyPosType.SYM, UniversalDependencyPosType.X
+        };
+
         /**
          * <summary>Overriden Universal Dependency Relation constructor. Gets toWord as input and calls it super class's constructor</summary>
          * <param name="toWord">Index of the word in the sentence that dependency relation is related</param>
@@ -61,6 +77,19 @@ namespace DependencyParser
             }
 
             return UniversalDependencyType.NONE;
+        }
+
+        public static UniversalDependencyPosType GetDependencyPosType(string tag)
+        {
+            for (var i = 0; i < universalDependencyPosTypes.Length; i++)
+            {
+                if (tag == universalDependencyPosTypes[i])
+                {
+                    return universalDependencyPosTags[i];
+                }
+            }
+
+            return UniversalDependencyPosType.X;
         }
 
         /**

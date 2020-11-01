@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Universal
 {
     /**
      * <summary>Enumerator class for Universal Dependency tags</summary>

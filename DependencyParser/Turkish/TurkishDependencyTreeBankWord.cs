@@ -3,7 +3,7 @@ using System.Xml;
 using Dictionary.Dictionary;
 using MorphologicalAnalysis;
 
-namespace DependencyParser
+namespace DependencyParser.Turkish
 {
     public class TurkishDependencyTreeBankWord : Word
     {

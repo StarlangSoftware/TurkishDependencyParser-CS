@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Turkish
 {
     /**
      * <summary>Enumerator class for Turkish Dependency tags</summary>

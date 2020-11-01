@@ -1,5 +1,6 @@
 using DataStructure;
 using DependencyParser;
+using DependencyParser.Turkish;
 using NUnit.Framework;
 
 namespace Test

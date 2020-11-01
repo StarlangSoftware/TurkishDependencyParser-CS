@@ -1,4 +1,4 @@
-namespace DependencyParser
+namespace DependencyParser.Stanford
 {
     /**
      * <summary>Enumerator class for Stanford Dependency tags</summary>

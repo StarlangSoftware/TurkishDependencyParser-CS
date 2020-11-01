@@ -4,7 +4,7 @@
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>NlpToolkit-DependencyParser</PackageId>
-        <PackageVersion>1.0.2</PackageVersion>
+        <PackageVersion>1.0.3</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,7 +13,27 @@
 
     <ItemGroup>
       <None Remove="metu-treebank.xml" />
-      <EmbeddedResource Include="metu-treebank.xml" />
+      <EmbeddedResource Include="metu-treebank.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_gb-ud-test.conllu" />
+      <EmbeddedResource Include="tr_gb-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_imst-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_imst-ud-dev.conllu" />
+      <None Remove="tr_imst-ud-test.conllu" />
+      <EmbeddedResource Include="tr_imst-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_imst-ud-train.conllu" />
+      <EmbeddedResource Include="tr_imst-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_pud-ud-test.conllu" />
+      <EmbeddedResource Include="tr_pud-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>
