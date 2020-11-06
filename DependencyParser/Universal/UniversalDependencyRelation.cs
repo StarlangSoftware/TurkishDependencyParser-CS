@@ -7,9 +7,9 @@ namespace DependencyParser.Universal
         private static readonly string[] UniversalDependencyTypes =
         {
             "ACL", "ADVCL", "ADVMOD", "AMOD", "APPOS", "AUX",
-            "CASE", "CC", "CCOMP", "CLF", "COMPOUND", "CONJ", "COP", "CSUBJ", "CSUBJPASS", "DEP", "DET", "DISCOURSE",
+            "CASE", "CC", "CCOMP", "CLF", "COMPOUND", "CONJ", "COP", "CSUBJ", "DEP", "DET", "DISCOURSE",
             "DISLOCATED",
-            "EXPL", "FIXED", "FLAT", "GOESWITH", "IOBJ", "LIST", "MARK", "NMOD", "NEG", "NSUBJ", "NSUBJPASS", "NUMMOD",
+            "EXPL", "FIXED", "FLAT", "GOESWITH", "IOBJ", "LIST", "MARK", "NMOD", "NSUBJ", "NUMMOD",
             "OBJ", "OBL", "ORPHAN",
             "PARATAXIS", "PUNCT", "REPARANDUM", "ROOT", "VOCATIVE", "XCOMP", "NONE"
         };
@@ -21,13 +21,13 @@ namespace DependencyParser.Universal
             UniversalDependencyType.AUX, UniversalDependencyType.CASE,
             UniversalDependencyType.CC, UniversalDependencyType.CCOMP, UniversalDependencyType.CLF,
             UniversalDependencyType.COMPOUND, UniversalDependencyType.CONJ,
-            UniversalDependencyType.COP, UniversalDependencyType.CSUBJ, UniversalDependencyType.CSUBJPASS,
+            UniversalDependencyType.COP, UniversalDependencyType.CSUBJ,
             UniversalDependencyType.DEP, UniversalDependencyType.DET, UniversalDependencyType.DISCOURSE,
             UniversalDependencyType.DISLOCATED, UniversalDependencyType.EXPL, UniversalDependencyType.FIXED,
             UniversalDependencyType.FLAT,
             UniversalDependencyType.GOESWITH, UniversalDependencyType.IOBJ, UniversalDependencyType.LIST,
             UniversalDependencyType.MARK, UniversalDependencyType.NMOD,
-            UniversalDependencyType.NEG, UniversalDependencyType.NSUBJ, UniversalDependencyType.NSUBJPASS,
+            UniversalDependencyType.NSUBJ,
             UniversalDependencyType.NUMMOD, UniversalDependencyType.OBJ, UniversalDependencyType.OBL,
             UniversalDependencyType.ORPHAN,
             UniversalDependencyType.PARATAXIS, UniversalDependencyType.PUNCT, UniversalDependencyType.REPARANDUM,
