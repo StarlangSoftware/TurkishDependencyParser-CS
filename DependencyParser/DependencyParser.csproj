@@ -4,7 +4,7 @@
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>NlpToolkit-DependencyParser</PackageId>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -32,6 +32,18 @@
       </EmbeddedResource>
       <None Remove="tr_pud-ud-test.conllu" />
       <EmbeddedResource Include="tr_pud-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_boun-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_boun-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_boun-ud-test.conllu" />
+      <EmbeddedResource Include="tr_boun-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_boun-ud-train.conllu" />
+      <EmbeddedResource Include="tr_boun-ud-train.conllu">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
