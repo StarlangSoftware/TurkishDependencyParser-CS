@@ -40,7 +40,7 @@ namespace DependencyParser.Turkish
         {
             for (var j = 0; j < TurkishDependencyTypes.Length; j++)
             {
-                if (tag == TurkishDependencyTypes[j])
+                if (tag.ToUpper() == TurkishDependencyTypes[j])
                 {
                     return TurkishDependencyTags[j];
                 }

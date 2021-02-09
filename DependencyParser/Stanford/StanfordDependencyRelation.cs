@@ -50,7 +50,7 @@ namespace DependencyParser.Stanford
         {
             for (var j = 0; j < StanfordDependencyTags.Length; j++)
             {
-                if (tag == StanfordDependencyTypes[j])
+                if (tag.ToLower() == StanfordDependencyTypes[j])
                 {
                     return StanfordDependencyTags[j];
                 }

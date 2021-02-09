@@ -70,7 +70,7 @@ namespace DependencyParser.Universal
         {
             for (var j = 0; j < UniversalDependencyTags.Length; j++)
             {
-                if (tag == UniversalDependencyTypes[j])
+                if (tag.ToUpper() == UniversalDependencyTypes[j])
                 {
                     return UniversalDependencyTags[j];
                 }
@@ -83,7 +83,7 @@ namespace DependencyParser.Universal
         {
             for (var i = 0; i < universalDependencyPosTypes.Length; i++)
             {
-                if (tag == universalDependencyPosTypes[i])
+                if (tag.ToUpper() == universalDependencyPosTypes[i])
                 {
                     return universalDependencyPosTags[i];
                 }
