@@ -11,7 +11,12 @@ namespace DependencyParser.Universal
             "DISLOCATED",
             "EXPL", "FIXED", "FLAT", "GOESWITH", "IOBJ", "LIST", "MARK", "NMOD", "NSUBJ", "NUMMOD",
             "OBJ", "OBL", "ORPHAN",
-            "PARATAXIS", "PUNCT", "REPARANDUM", "ROOT", "VOCATIVE", "XCOMP", "NONE"
+            "PARATAXIS", "PUNCT", "REPARANDUM", "ROOT", "VOCATIVE", "XCOMP", "ACL:RELCL", "AUX:PASS",
+            "CC:PRECONJ", "COMPOUND:PRT", "DET:PREDET", "FLAT:FOREIGN",
+            "NSUBJ:PASS", "CSUBJ:PASS", "NMOD:NPMOD", "NMOD:POSS",
+            "NMOD:TMOD", "ADVMOD:EMPH", "AUX:Q", "COMPOUND:LVC",
+            "COMPOUND:REDUP", "CSUBJ:COP", "NMOD:COMP", "NMOD:PART",
+            "NSUBJ:COP", "OBL:AGENT", "OBL:TMOD", "NONE"
         };
 
         private static readonly UniversalDependencyType[] UniversalDependencyTags =
@@ -32,7 +37,18 @@ namespace DependencyParser.Universal
             UniversalDependencyType.ORPHAN,
             UniversalDependencyType.PARATAXIS, UniversalDependencyType.PUNCT, UniversalDependencyType.REPARANDUM,
             UniversalDependencyType.ROOT,
-            UniversalDependencyType.VOCATIVE, UniversalDependencyType.XCOMP, UniversalDependencyType.NONE
+            UniversalDependencyType.VOCATIVE, UniversalDependencyType.XCOMP, UniversalDependencyType.ACL_RELCL,
+            UniversalDependencyType.AUX_PASS,
+            UniversalDependencyType.CC_PRECONJ, UniversalDependencyType.COMPOUND_PRT,
+            UniversalDependencyType.DET_PREDET, UniversalDependencyType.FLAT_FOREIGN,
+            UniversalDependencyType.NSUBJ_PASS, UniversalDependencyType.CSUBJ_PASS, UniversalDependencyType.NMOD_NPMOD,
+            UniversalDependencyType.NMOD_POSS,
+            UniversalDependencyType.NMOD_TMOD, UniversalDependencyType.ADVMOD_EMPH, UniversalDependencyType.AUX_Q,
+            UniversalDependencyType.COMPOUND_LVC,
+            UniversalDependencyType.COMPOUND_REDUP, UniversalDependencyType.CSUBJ_COP,
+            UniversalDependencyType.NMOD_COMP, UniversalDependencyType.NMOD_PART,
+            UniversalDependencyType.NSUBJ_COP, UniversalDependencyType.OBL_AGENT, UniversalDependencyType.OBL_TMOD,
+            UniversalDependencyType.NONE
         };
 
         private static readonly string[] universalDependencyPosTypes =
@@ -105,7 +121,7 @@ namespace DependencyParser.Universal
 
         public override string ToString()
         {
-            return UniversalDependencyTypes[(int) _universalDependencyType];
+            return UniversalDependencyTypes[(int)_universalDependencyType];
         }
     }
 }

@@ -56,10 +56,6 @@ namespace DependencyParser.Universal
                                 {
                                     var to = int.Parse(items[6]);
                                     var dependencyType = items[7].ToUpper();
-                                    if (dependencyType.Contains(":"))
-                                    {
-                                        dependencyType = dependencyType.Substring(0, dependencyType.IndexOf(":"));
-                                    }
 
                                     relation = new UniversalDependencyRelation(to, dependencyType);
                                 }
