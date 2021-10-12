@@ -50,6 +50,10 @@ namespace DependencyParser.Universal
             return features.GetFeatureValue(featureName);
         }
 
+        public bool FeatureExists(string featureName) {
+            return features.FeatureExists(featureName);
+        }
+
         public UniversalDependencyRelation GetRelation() {
             return relation;
         }

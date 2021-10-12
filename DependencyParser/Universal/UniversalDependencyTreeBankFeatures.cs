@@ -34,6 +34,11 @@ namespace DependencyParser.Universal
             return featureList[feature];
         }
 
+        public bool FeatureExists(string feature)
+        {
+            return featureList.ContainsKey(feature);
+        }
+
         public override string ToString()
         {
             if (featureList.Count == 0)
