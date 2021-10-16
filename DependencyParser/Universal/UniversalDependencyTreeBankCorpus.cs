@@ -78,5 +78,17 @@ namespace DependencyParser.Universal
                 line = streamReader.ReadLine();
             }
         }
+
+        public ParserEvaluationScore CompareParses(UniversalDependencyTreeBankCorpus corpus)
+        {
+            var score = new ParserEvaluationScore();
+            for (var i = 0; i < sentences.Count; i++)
+            {
+                score.Add(((UniversalDependencyTreeBankSentence)sentences[i]).CompareParses(
+                    (UniversalDependencyTreeBankSentence)corpus.GetSentence(i)));
+            }
+
+            return score;
+        }
     }
 }
