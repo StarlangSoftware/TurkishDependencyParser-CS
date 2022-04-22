@@ -4,7 +4,7 @@
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>NlpToolkit-DependencyParser</PackageId>
-        <PackageVersion>1.0.12</PackageVersion>
+        <PackageVersion>1.0.13</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -44,6 +44,78 @@
       </EmbeddedResource>
       <None Remove="tr_boun-ud-train.conllu" />
       <EmbeddedResource Include="tr_boun-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="en_atis-ud-dev.conllu" />
+      <EmbeddedResource Include="en_atis-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="en_atis-ud-test.conllu" />
+      <EmbeddedResource Include="en_atis-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="en_atis-ud-train.conllu" />
+      <EmbeddedResource Include="en_atis-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_atis-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_atis-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_atis-ud-test.conllu" />
+      <EmbeddedResource Include="tr_atis-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_atis-ud-train.conllu" />
+      <EmbeddedResource Include="tr_atis-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_framenet-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_framenet-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_framenet-ud-test.conllu" />
+      <EmbeddedResource Include="tr_framenet-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_framenet-ud-train.conllu" />
+      <EmbeddedResource Include="tr_framenet-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_kenet-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_kenet-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_kenet-ud-test.conllu" />
+      <EmbeddedResource Include="tr_kenet-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_kenet-ud-train.conllu" />
+      <EmbeddedResource Include="tr_kenet-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_penn-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_penn-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_penn-ud-test.conllu" />
+      <EmbeddedResource Include="tr_penn-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_penn-ud-train.conllu" />
+      <EmbeddedResource Include="tr_penn-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_tourism-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_tourism-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_tourism-ud-test.conllu" />
+      <EmbeddedResource Include="tr_tourism-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_tourism-ud-train.conllu" />
+      <EmbeddedResource Include="tr_tourism-ud-train.conllu">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>
