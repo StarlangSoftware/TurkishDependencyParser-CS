@@ -63,6 +63,7 @@ namespace DependencyParser.Universal
         NSUBJ_COP,
         OBL_AGENT,
         OBL_TMOD,
+        OBL_NPMOD,
         NONE
     }
 }
