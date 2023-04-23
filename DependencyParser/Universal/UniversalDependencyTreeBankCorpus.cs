@@ -4,9 +4,12 @@ namespace DependencyParser.Universal
 {
     public class UniversalDependencyTreeBankCorpus : Corpus.Corpus
     {
+        private string _language;
+        
         public UniversalDependencyTreeBankCorpus(string fileName)
         {
             var assembly = typeof(UniversalDependencyTreeBankCorpus).Assembly;
+            _language = fileName.Substring(0, fileName.IndexOf('_'));
             var stream = assembly.GetManifestResourceStream("DependencyParser." + fileName);
             var streamReader = new StreamReader(stream);
             var line = streamReader.ReadLine();
@@ -15,7 +18,7 @@ namespace DependencyParser.Universal
             {
                 if (line.Length == 0)
                 {
-                    AddSentence(new UniversalDependencyTreeBankSentence(sentence));
+                    AddSentence(new UniversalDependencyTreeBankSentence(_language, sentence));
                     sentence = "";
                 }
                 else

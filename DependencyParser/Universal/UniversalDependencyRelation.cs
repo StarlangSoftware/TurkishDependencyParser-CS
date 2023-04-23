@@ -4,7 +4,7 @@ namespace DependencyParser.Universal
     {
         private readonly UniversalDependencyType _universalDependencyType;
 
-        private static readonly string[] UniversalDependencyTypes =
+        public static readonly string[] UniversalDependencyTypes =
         {
             "ACL", "ADVCL", "ADVMOD", "AMOD", "APPOS", "AUX",
             "CASE", "CC", "CCOMP", "CLF", "COMPOUND", "CONJ", "COP", "CSUBJ", "DEP", "DET", "DISCOURSE",

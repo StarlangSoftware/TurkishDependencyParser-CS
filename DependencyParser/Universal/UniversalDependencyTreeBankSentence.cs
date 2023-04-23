@@ -14,7 +14,7 @@ namespace DependencyParser.Universal
             comments = new List<string>();
         }
 
-        public UniversalDependencyTreeBankSentence(string sentence)
+        public UniversalDependencyTreeBankSentence(string language, string sentence)
         {
             UniversalDependencyRelation relation;
             comments = new List<string>();
@@ -48,7 +48,7 @@ namespace DependencyParser.Universal
 
                             var xpos = items[4];
                             var features =
-                                new UniversalDependencyTreeBankFeatures(items[5]);
+                                new UniversalDependencyTreeBankFeatures(language, items[5]);
                             if (items[6] != "_")
                             {
                                 var to = int.Parse(items[6]);
