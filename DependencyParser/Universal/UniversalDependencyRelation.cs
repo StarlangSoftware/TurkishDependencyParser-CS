@@ -19,7 +19,7 @@ namespace DependencyParser.Universal
             "NSUBJ:COP", "OBL:AGENT", "OBL:TMOD", "OBL:NPMOD", "NONE"
         };
 
-        private static readonly UniversalDependencyType[] UniversalDependencyTags =
+        public static readonly UniversalDependencyType[] UniversalDependencyTags =
         {
             UniversalDependencyType.ACL, UniversalDependencyType.ADVCL,
             UniversalDependencyType.ADVMOD, UniversalDependencyType.AMOD, UniversalDependencyType.APPOS,
@@ -51,13 +51,13 @@ namespace DependencyParser.Universal
             UniversalDependencyType.OBL_NPMOD, UniversalDependencyType.NONE
         };
 
-        private static readonly string[] universalDependencyPosTypes =
+        public static readonly string[] UniversalDependencyPosTypes =
         {
             "ADJ", "ADV", "INTJ", "NOUN", "PROPN", "VERB", "ADP", "AUX", "CCONJ", "DET", "NUM", "PART", "PRON",
             "SCONJ", "PUNCT", "SYM", "X"
         };
 
-        private static readonly UniversalDependencyPosType[] universalDependencyPosTags =
+        public static readonly UniversalDependencyPosType[] UniversalDependencyPosTags =
         {
             UniversalDependencyPosType.ADJ, UniversalDependencyPosType.ADV, UniversalDependencyPosType.INTJ,
             UniversalDependencyPosType.NOUN, UniversalDependencyPosType.PROPN, UniversalDependencyPosType.VERB,
@@ -102,11 +102,11 @@ namespace DependencyParser.Universal
 
         public static UniversalDependencyPosType GetDependencyPosType(string tag)
         {
-            for (var i = 0; i < universalDependencyPosTypes.Length; i++)
+            for (var i = 0; i < UniversalDependencyPosTypes.Length; i++)
             {
-                if (tag.ToUpper() == universalDependencyPosTypes[i])
+                if (tag.ToUpper() == UniversalDependencyPosTypes[i])
                 {
-                    return universalDependencyPosTags[i];
+                    return UniversalDependencyPosTags[i];
                 }
             }
 
