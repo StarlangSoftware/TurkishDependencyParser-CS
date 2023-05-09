@@ -229,8 +229,9 @@ namespace DependencyParser.Universal
 
         public static int DependencyIndex(string universalDependency)
         {
-            int index = 0;
-            foreach (var dependency in UniversalDependencyRelation.UniversalDependencyTypes){
+            var index = 0;
+            foreach (var dependency in UniversalDependencyRelation.UniversalDependencyTypes)
+            {
                 if (dependency == universalDependency)
                 {
                     return index;
@@ -238,6 +239,7 @@ namespace DependencyParser.Universal
 
                 index++;
             }
+
             return -1;
         }
 
@@ -310,7 +312,8 @@ namespace DependencyParser.Universal
                         }
                         else
                         {
-                            Console.WriteLine("Either the feature " + featureName + " or the value " + featureValue + " is wrong");
+                            Console.WriteLine("Either the feature " + featureName + " or the value " + featureValue +
+                                              " is wrong");
                         }
                     }
                     else
@@ -319,6 +322,11 @@ namespace DependencyParser.Universal
                     }
                 }
             }
+        }
+
+        public UniversalDependencyTreeBankFeatures Clone()
+        {
+            return new UniversalDependencyTreeBankFeatures("u", ToString());
         }
 
         public string GetFeatureValue(string feature)

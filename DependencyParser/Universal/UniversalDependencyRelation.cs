@@ -75,6 +75,11 @@ namespace DependencyParser.Universal
         {
         }
 
+        public UniversalDependencyRelation Clone()
+        {
+            return new UniversalDependencyRelation(toWord, ToString());
+        }
+
         /**
          * <summary>The getDependencyTag method takes an dependency tag as string and returns the {@link UniversalDependencyType}
          * form of it.</summary>
@@ -118,18 +123,24 @@ namespace DependencyParser.Universal
         {
             this._universalDependencyType = GetDependencyTag(dependencyType);
         }
-        
-        public ParserEvaluationScore CompareRelations(UniversalDependencyRelation relation){
+
+        public ParserEvaluationScore CompareRelations(UniversalDependencyRelation relation)
+        {
             double LS = 0.0, LAS = 0.0, UAS = 0.0;
-            if (ToString() == relation.ToString()){
+            if (ToString() == relation.ToString())
+            {
                 LS = 1.0;
-                if (toWord == relation.To()){
+                if (toWord == relation.To())
+                {
                     LAS = 1.0;
                 }
             }
-            if (toWord == relation.To()){
+
+            if (toWord == relation.To())
+            {
                 UAS = 1.0;
             }
+
             return new ParserEvaluationScore(LAS, UAS, LS, 1);
         }
 

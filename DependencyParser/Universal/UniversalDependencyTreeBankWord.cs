@@ -8,14 +8,15 @@ namespace DependencyParser.Universal
         private readonly string lemma;
         private readonly UniversalDependencyPosType upos;
         private readonly string xpos;
-        private readonly UniversalDependencyTreeBankFeatures features;
-        private readonly UniversalDependencyRelation relation;
+        private UniversalDependencyTreeBankFeatures features;
+        private UniversalDependencyRelation relation;
         private readonly string deps;
         private readonly string misc;
 
-        public UniversalDependencyTreeBankWord(int id, string name, string lemma, UniversalDependencyPosType upos, 
+        public UniversalDependencyTreeBankWord(int id, string name, string lemma, UniversalDependencyPosType upos,
             string xpos, UniversalDependencyTreeBankFeatures features,
-            UniversalDependencyRelation relation, string deps, string misc) : base(name){
+            UniversalDependencyRelation relation, string deps, string misc) : base(name)
+        {
             this.id = id;
             this.lemma = lemma;
             this.upos = upos;
@@ -26,51 +27,77 @@ namespace DependencyParser.Universal
             this.misc = misc;
         }
 
-        public int GetId() {
+        public new UniversalDependencyTreeBankWord Clone()
+        {
+            var word = new UniversalDependencyTreeBankWord(id, name, lemma, upos, xpos, null, null, deps, misc);
+            word.features = features.Clone();
+            if (relation != null)
+            {
+                word.relation = relation.Clone();
+            }
+            else
+            {
+                word.relation = null;
+            }
+
+            return word;
+        }
+
+        public int GetId()
+        {
             return id;
         }
 
-        public string GetLemma() {
+        public string GetLemma()
+        {
             return lemma;
         }
 
-        public UniversalDependencyPosType GetUpos() {
+        public UniversalDependencyPosType GetUpos()
+        {
             return upos;
         }
 
-        public string GetXpos() {
+        public string GetXpos()
+        {
             return xpos;
         }
 
-        public UniversalDependencyTreeBankFeatures GetFeatures() {
+        public UniversalDependencyTreeBankFeatures GetFeatures()
+        {
             return features;
         }
 
-        public string GetFeatureValue(string featureName) {
+        public string GetFeatureValue(string featureName)
+        {
             return features.GetFeatureValue(featureName);
         }
 
-        public bool FeatureExists(string featureName) {
+        public bool FeatureExists(string featureName)
+        {
             return features.FeatureExists(featureName);
         }
 
-        public UniversalDependencyRelation GetRelation() {
+        public UniversalDependencyRelation GetRelation()
+        {
             return relation;
         }
 
-        public string GetDeps() {
+        public string GetDeps()
+        {
             return deps;
         }
 
-        public string GetMisc() {
+        public string GetMisc()
+        {
             return misc;
         }
 
-        public override string ToString(){
+        public override string ToString()
+        {
             return id + "\t" + name + "\t" + lemma + "\t" + upos + "\t" +
                    xpos + "\t" + features + "\t" + relation.To() + "\t" +
                    relation.ToString().ToLower() + "\t" + deps + "\t" + misc;
         }
-
     }
 }
