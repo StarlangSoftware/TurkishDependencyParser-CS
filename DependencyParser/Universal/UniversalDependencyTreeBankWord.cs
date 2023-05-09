@@ -94,10 +94,6 @@ namespace DependencyParser.Universal
             return relation;
         }
 
-        public void SetRelation(UniversalDependencyRelation relation) {
-            this.relation = relation;
-        }
-        
         public string GetDeps()
         {
             return deps;
