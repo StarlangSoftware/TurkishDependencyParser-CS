@@ -27,6 +27,17 @@ namespace DependencyParser.Universal
             this.misc = misc;
         }
 
+        public UniversalDependencyTreeBankWord() : base("root"){
+            id = 0;
+            lemma = "";
+            upos = UniversalDependencyPosType.X;
+            xpos = "";
+            features = null;
+            deps = "";
+            misc = "";
+            relation = new UniversalDependencyRelation(-1, "DEP");
+        }
+
         public new UniversalDependencyTreeBankWord Clone()
         {
             var word = new UniversalDependencyTreeBankWord(id, name, lemma, upos, xpos, null, null, deps, misc);
