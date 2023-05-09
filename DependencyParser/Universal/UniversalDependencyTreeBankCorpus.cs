@@ -5,7 +5,11 @@ namespace DependencyParser.Universal
     public class UniversalDependencyTreeBankCorpus : Corpus.Corpus
     {
         private string _language;
-        
+
+        public UniversalDependencyTreeBankCorpus()
+        {
+        }
+
         public UniversalDependencyTreeBankCorpus(string fileName)
         {
             var assembly = typeof(UniversalDependencyTreeBankCorpus).Assembly;
