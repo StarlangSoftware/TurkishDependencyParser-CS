@@ -13,7 +13,7 @@ namespace DependencyParser.Universal
             "Abbr", "Typo", "Gender", "Animacy", "NounClass",
             "Number", "Case", "Definite", "Degree", "VerbForm",
             "Mood", "Tense", "Aspect", "Voice", "Evident",
-            "Polarity", "Person", "Polite", "Clusivity"
+            "Polarity", "Person", "Polite", "Clusivity", "NumForm"
         };
 
         public static readonly string[][] UniversalFeatureValues =
@@ -57,7 +57,8 @@ namespace DependencyParser.Universal
             new[] { "Neg", "Pos" },
             new[] { "0", "1", "2", "3", "4" },
             new[] { "Elev", "Form", "Humb", "Infm" },
-            new[] { "Ex", "In" }
+            new[] { "Ex", "In" },
+            new[] { "Word", "Digit", "Roman" }
         };
 
         public static readonly string[][] TurkishFeatureValues =
@@ -97,6 +98,7 @@ namespace DependencyParser.Universal
             new[] { "Neg", "Pos" },
             new[] { "1", "2", "3" },
             new string[] { },
+            new string[] { },
             new string[] { }
         };
 
@@ -114,18 +116,22 @@ namespace DependencyParser.Universal
             {
                 "Yes"
             },
-            new string[]
+            new[]
             {
+                "Yes"
             },
-            new string[]
+            new[]
             {
+                "Yes"
             },
 
-            new string[]
+            new[]
             {
+                "Yes"
             },
-            new string[]
+            new[]
             {
+                "Yes"
             },
             new[]
             {
@@ -178,8 +184,9 @@ namespace DependencyParser.Universal
             {
             },
 
-            new string[]
+            new[]
             {
+                "Neg"
             },
             new[]
             {
@@ -190,7 +197,8 @@ namespace DependencyParser.Universal
             },
             new string[]
             {
-            }
+            },
+            new[] { "Word", "Digit", "Roman" }
         };
 
         private static int FeatureIndex(string featureName)

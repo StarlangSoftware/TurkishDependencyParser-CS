@@ -64,6 +64,9 @@ namespace DependencyParser.Universal
         OBL_AGENT,
         OBL_TMOD,
         OBL_NPMOD,
+        NSUBJ_OUTER,
+        CSUBJ_OUTER, 
+        ADVCL_RELCL,
         NONE
     }
 }
