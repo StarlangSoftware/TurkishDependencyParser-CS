@@ -16,7 +16,7 @@ Video Lectures
 
 For Developers
 ============
-You can also see either [Java](https://github.com/starlangsoftware/TurkishDependencyParser), [Python](https://github.com/starlangsoftware/TurkishDependencyParser-Py), [Cython](https://github.com/starlangsoftware/TurkishDependencyParser-Cy), [Swift](https://github.com/starlangsoftware/TurkishDependencyParser-Swift), [Js](https://github.com/starlangsoftware/TurkishDependencyParser-Js), or [C++](https://github.com/starlangsoftware/TurkishDependencyParser-CPP) repository.
+You can also see either [Java](https://github.com/starlangsoftware/TurkishDependencyParser), [Python](https://github.com/starlangsoftware/TurkishDependencyParser-Py), [Cython](https://github.com/starlangsoftware/TurkishDependencyParser-Cy), [Swift](https://github.com/starlangsoftware/TurkishDependencyParser-Swift), [Js](https://github.com/starlangsoftware/TurkishDependencyParser-Js), [C++](https://github.com/starlangsoftware/TurkishDependencyParser-CPP), or [C](https://github.com/starlangsoftware/TurkishDependencyParser-C) repository.
 
 ## Requirements
 
