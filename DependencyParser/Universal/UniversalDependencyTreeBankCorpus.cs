@@ -6,10 +6,18 @@ namespace DependencyParser.Universal
     {
         private string _language;
 
+        /// <summary>
+        /// Empty constructor.
+        /// </summary>
         public UniversalDependencyTreeBankCorpus()
         {
         }
 
+        /// <summary>
+        /// Constructs a universal dependency corpus from an input file. Reads the sentences one by one and constructs a
+        /// universal dependency sentence from each line read.
+        /// </summary>
+        /// <param name="fileName">Input file name.</param>
         public UniversalDependencyTreeBankCorpus(string fileName)
         {
             var assembly = typeof(UniversalDependencyTreeBankCorpus).Assembly;
@@ -33,6 +41,12 @@ namespace DependencyParser.Universal
             }
         }
 
+        /// <summary>
+        /// Compares the corpus with the given corpus and returns a parser evaluation score for this comparison. The result
+        /// is calculated by summing up the parser evaluation scores of sentence by sentence comparisons.
+        /// </summary>
+        /// <param name="corpus">Universal dependency corpus to be compared.</param>
+        /// <returns>A parser evaluation score object.</returns>
         public ParserEvaluationScore CompareParses(UniversalDependencyTreeBankCorpus corpus)
         {
             var score = new ParserEvaluationScore();

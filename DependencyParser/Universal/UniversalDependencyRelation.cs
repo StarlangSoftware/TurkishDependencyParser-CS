@@ -103,6 +103,12 @@ namespace DependencyParser.Universal
             return UniversalDependencyType.NONE;
         }
 
+        /// <summary>
+        /// The getDependencyPosType method takes a dependency pos type as string and returns the {@link UniversalDependencyPosType}
+        /// form of it.
+        /// </summary>
+        /// <param name="tag">Dependency pos type in string form</param>
+        /// <returns>Dependency pos type for a given dependency pos string</returns>
         public static UniversalDependencyPosType GetDependencyPosType(string tag)
         {
             for (var i = 0; i < UniversalDependencyPosTypes.Length; i++)
@@ -127,6 +133,16 @@ namespace DependencyParser.Universal
             this._universalDependencyType = GetDependencyTag(dependencyType);
         }
 
+        /// <summary>
+        /// Compares the relation with the given universal dependency relation and returns a parser evaluation score for this
+        /// comparison. If toWord fields are equal for both relation UAS is 1, otherwise it is 0. If both toWord and
+        /// dependency types are the same, LAS is 1, otherwise it is 0. If only dependency types of both relations are
+        /// the same, LS is 1, otherwise it is 0.
+        /// </summary>
+        /// <param name="relation">Universal dependency relation to be compared.</param>
+        /// <returns>A parser evaluation score object with (i) LAS = 1, if to and dependency types are same; LAS = 0,
+        /// otherwise, (ii) UAS = 1, if to is the same; UAS = 0, otherwise, (iii) LS = 1, if dependency types are the same;
+        /// LS = 0, otherwise.</returns>
         public ParserEvaluationScore CompareRelations(UniversalDependencyRelation relation)
         {
             double LS = 0.0, LAS = 0.0, UAS = 0.0;

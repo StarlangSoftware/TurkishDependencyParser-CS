@@ -201,6 +201,13 @@ namespace DependencyParser.Universal
             new[] { "Word", "Digit", "Roman" }
         };
 
+        /// <summary>
+        /// Returns the index of the universal feature type in the universalFeatureTypes array, given the name of the feature
+        /// type.
+        /// </summary>
+        /// <param name="featureName">Name of the feature type</param>
+        /// <returns>Index of the universal feature type in the universalFeatureTypes array. If the name does not exist, the
+        /// function returns -1.</returns>
         private static int FeatureIndex(string featureName)
         {
             if (featureName.Contains("["))
@@ -219,6 +226,11 @@ namespace DependencyParser.Universal
             return -1;
         }
 
+        /// <summary>
+        /// Returns the index of the given universal dependency pos.
+        /// </summary>
+        /// <param name="uPos">Given universal dependency part of speech tag.</param>
+        /// <returns>The index of the universal dependency pos.</returns>
         public static int PosIndex(string uPos)
         {
             var index = 0;
@@ -235,6 +247,13 @@ namespace DependencyParser.Universal
             return -1;
         }
 
+        /// <summary>
+        /// Returns the index of the universal dependency type in the universalDependencyTypes array, given the name of the
+        /// universal dependency type.
+        /// </summary>
+        /// <param name="universalDependency">Universal dependency type</param>
+        /// <returns>Index of the universal dependency type in the universalDependencyTypes array. If the name does not exist,
+        /// the function returns -1.</returns>
         public static int DependencyIndex(string universalDependency)
         {
             var index = 0;
@@ -251,9 +270,15 @@ namespace DependencyParser.Universal
             return -1;
         }
 
+        /// <summary>
+        /// Returns the number of distinct values for a feature in a given language
+        /// </summary>
+        /// <param name="language">Language name. Currently, 'en' and 'tr' languages are supported.</param>
+        /// <param name="featureName">Name of the feature type.</param>
+        /// <returns>The number of distinct values for a feature in a given language</returns>
         public static int NumberOfValues(string language, string featureName)
         {
-            int featureIndex = FeatureIndex(featureName);
+            var featureIndex = FeatureIndex(featureName);
             if (featureIndex != -1)
             {
                 switch (language)
@@ -268,6 +293,15 @@ namespace DependencyParser.Universal
             return -1;
         }
 
+        /// <summary>
+        /// Returns the index of the given value in the feature value array for the given feature in the given
+        /// language.
+        /// </summary>
+        /// <param name="language">Language name. Currently, 'en' and 'tr' languages are supported.</param>
+        /// <param name="featureName">Name of the feature.</param>
+        /// <param name="featureValue">Value of the feature.</param>
+        /// <returns>The index of the given feature value in the feature value array for the given feature in the given
+        /// language.</returns>
         public static int FeatureValueIndex(string language, string featureName, string featureValue)
         {
             string[][] searchArray;
@@ -302,6 +336,14 @@ namespace DependencyParser.Universal
             return -1;
         }
 
+        /// <summary>
+        /// Constructor of a UniversalDependencyTreeBankFeatures object. Given the language of the word and features of the
+        /// word as a string, the method splits the features with respect to pipe character. Then for each feature type and
+        /// value pair, their values and types are inserted into the featureList hash map. The method also check for validity
+        /// of the feature values for that feature type.
+        /// </summary>
+        /// <param name="language">Language name. Currently, 'en' and 'tr' languages are supported.</param>
+        /// <param name="features">Feature string.</param>
         public UniversalDependencyTreeBankFeatures(string language, string features)
         {
             featureList = new Dictionary<string, string>();
@@ -337,16 +379,30 @@ namespace DependencyParser.Universal
             return new UniversalDependencyTreeBankFeatures("u", ToString());
         }
 
+        /// <summary>
+        /// Gets the value of a given feature.
+        /// </summary>
+        /// <param name="feature">Name of the feature</param>
+        /// <returns>Value of the feature</returns>
         public string GetFeatureValue(string feature)
         {
             return featureList[feature];
         }
 
+        /// <summary>
+        /// Checks if the given feature exists in the feature list.
+        /// </summary>
+        /// <param name="feature">Name of the feature</param>
+        /// <returns>True, if the feature list contains the feature, false otherwise.</returns>
         public bool FeatureExists(string feature)
         {
             return featureList.ContainsKey(feature);
         }
 
+        /// <summary>
+        /// Overridden toString method. Returns feature with their values separated with pipe characters.
+        /// </summary>
+        /// <returns>A string of feature values and their names separated with pipe character.</returns>
         public override string ToString()
         {
             if (featureList.Count == 0)

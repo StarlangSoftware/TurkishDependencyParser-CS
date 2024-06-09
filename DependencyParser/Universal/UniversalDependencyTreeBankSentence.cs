@@ -9,11 +9,21 @@ namespace DependencyParser.Universal
     {
         private List<string> comments;
 
+        /// <summary>
+        /// Empty constructor for the UniversalDependencyTreeBankSentence. Initializes comments.
+        /// </summary>
         public UniversalDependencyTreeBankSentence()
         {
             comments = new List<string>();
         }
 
+        /// <summary>
+        /// Constructor for the UniversalDependencyTreeBankSentence.  Get a line as input and splits the line wrt tab
+        /// character. The number of items should be 10. The items are id, surfaceForm, lemma, upos, xpos, feature list,
+        /// head word index, dependency type, external dependencies and miscellaneous things for one word.
+        /// </summary>
+        /// <param name="language">Language name. Currently, 'en' and 'tr' languages are supported.</param>
+        /// <param name="sentence">Sentence string to be processed.</param>
         public UniversalDependencyTreeBankSentence(string language, string sentence)
         {
             UniversalDependencyRelation relation;
@@ -73,11 +83,19 @@ namespace DependencyParser.Universal
             }
         }
 
+        /// <summary>
+        /// Adds a comment string to comments array list.
+        /// </summary>
+        /// <param name="comment">Comment to be added.</param>
         public void AddComment(string comment)
         {
             comments.Add(comment);
         }
 
+        /// <summary>
+        /// Overridden toString method. Concatenates the strings of words to get the string of a sentence.
+        /// </summary>
+        /// <returns>Concatenation of the strings of thw strings of words.</returns>
         public override string ToString()
         {
             var result = "";
@@ -95,6 +113,12 @@ namespace DependencyParser.Universal
             return result;
         }
 
+        /// <summary>
+        /// Compares the sentence with the given sentence and returns a parser evaluation score for this comparison. The result
+        /// is calculated by summing up the parser evaluation scores of word by word dpendency relation comparisons.
+        /// </summary>
+        /// <param name="sentence">Universal dependency sentence to be compared.</param>
+        /// <returns>A parser evaluation score object.</returns>
         public ParserEvaluationScore CompareParses(UniversalDependencyTreeBankSentence sentence)
         {
             var score = new ParserEvaluationScore();
