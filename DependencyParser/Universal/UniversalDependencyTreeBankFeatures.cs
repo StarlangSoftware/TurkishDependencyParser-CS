@@ -67,10 +67,10 @@ namespace DependencyParser.Universal
             new[] { "Card", "Dist", "Ord" },
             new string[] { },
             new[] { "Yes" },
-            new string[] { },
+            new[] { "Yes"},
 
             new[] { "Yes" },
-            new string[] { },
+            new[] { "Yes"},
             new string[] { },
             new string[] { },
             new string[] { },
@@ -97,7 +97,7 @@ namespace DependencyParser.Universal
 
             new[] { "Neg", "Pos" },
             new[] { "1", "2", "3" },
-            new string[] { },
+            new[] { "Form", "Infm" },
             new string[] { },
             new string[] { }
         };
