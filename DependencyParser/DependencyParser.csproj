@@ -3,12 +3,12 @@
     <PropertyGroup>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>NlpToolkit-DependencyParser</PackageId>
-        <PackageVersion>1.0.19</PackageVersion>
-        <TargetFrameworks>netcoreapp3.1;net8.0</TargetFrameworks>
+        <PackageVersion>1.0.20</PackageVersion>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NlpToolkit-MorphologicalAnalysis" Version="1.0.22" />
+      <PackageReference Include="NlpToolkit-MorphologicalAnalysis" Version="1.0.23" />
     </ItemGroup>
 
     <ItemGroup>
