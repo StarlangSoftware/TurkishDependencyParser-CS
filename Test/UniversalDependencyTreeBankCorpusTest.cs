@@ -16,12 +16,24 @@ namespace Test
             return wordCount;
         }
 
+        private int SplitCount(UniversalDependencyTreeBankCorpus corpus)
+        {
+            var splitCount = 0;
+            for (var i = 0; i < corpus.SentenceCount(); i++)
+            {
+                splitCount += ((UniversalDependencyTreeBankSentence)corpus.GetSentence(i)).SplitSize();
+            }
+
+            return splitCount;
+        }
+
         [Test]
         public void TestDependencyCorpus1()
         {
             var corpus = new UniversalDependencyTreeBankCorpus("tr_gb-ud-test.conllu");
             Assert.AreEqual(2880, corpus.SentenceCount());
             Assert.AreEqual(17177, WordCount(corpus));
+            Assert.AreEqual(371, SplitCount(corpus));
         }
 
         [Test]
@@ -30,6 +42,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-dev.conllu");
             Assert.AreEqual(1100, corpus.SentenceCount());
             Assert.AreEqual(10542, WordCount(corpus));
+            Assert.AreEqual(279, SplitCount(corpus));
         }
 
         [Test]
@@ -38,6 +51,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-test.conllu");
             Assert.AreEqual(1100, corpus.SentenceCount());
             Assert.AreEqual(10032, WordCount(corpus));
+            Assert.AreEqual(278, SplitCount(corpus));
         }
 
         [Test]
@@ -46,6 +60,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-train.conllu");
             Assert.AreEqual(3435, corpus.SentenceCount());
             Assert.AreEqual(37522, WordCount(corpus));
+            Assert.AreEqual(1082, SplitCount(corpus));
         }
 
         [Test]
@@ -54,6 +69,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_pud-ud-test.conllu");
             Assert.AreEqual(1000, corpus.SentenceCount());
             Assert.AreEqual(16881, WordCount(corpus));
+            Assert.AreEqual(346, SplitCount(corpus));
         }
 
         [Test]
@@ -62,6 +78,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_boun-ud-dev.conllu");
             Assert.AreEqual(979, corpus.SentenceCount());
             Assert.AreEqual(12289, WordCount(corpus));
+            Assert.AreEqual(266, SplitCount(corpus));
         }
 
         [Test]
@@ -70,6 +87,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_boun-ud-test.conllu");
             Assert.AreEqual(979, corpus.SentenceCount());
             Assert.AreEqual(12210, WordCount(corpus));
+            Assert.AreEqual(194, SplitCount(corpus));
         }
 
         [Test]
@@ -78,6 +96,7 @@ namespace Test
             var corpus = new UniversalDependencyTreeBankCorpus("tr_boun-ud-train.conllu");
             Assert.AreEqual(7803, corpus.SentenceCount());
             Assert.AreEqual(100713, WordCount(corpus));
+            Assert.AreEqual(2914, SplitCount(corpus));
         }
 
         [Test]

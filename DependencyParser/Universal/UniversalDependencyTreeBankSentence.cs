@@ -7,14 +7,16 @@ namespace DependencyParser.Universal
 {
     public class UniversalDependencyTreeBankSentence : Sentence
     {
-        private List<string> comments;
+        private readonly List<string> _comments;
+        private readonly List<string> _splits;
 
         /// <summary>
         /// Empty constructor for the UniversalDependencyTreeBankSentence. Initializes comments.
         /// </summary>
         public UniversalDependencyTreeBankSentence()
         {
-            comments = new List<string>();
+            _comments = [];
+            _splits = [];
         }
 
         /// <summary>
@@ -27,7 +29,8 @@ namespace DependencyParser.Universal
         public UniversalDependencyTreeBankSentence(string language, string sentence)
         {
             UniversalDependencyRelation relation;
-            comments = new List<string>();
+            _comments = [];
+            _splits = [];
             var lines = sentence.Split("\n");
             foreach (var line in lines)
             {
@@ -78,6 +81,13 @@ namespace DependencyParser.Universal
                                 lemma, upos, xpos, features, relation, deps, misc);
                             AddWord(word);
                         }
+                        else
+                        {
+                            if (new Regex("^\\d+-\\d+$").IsMatch(id))
+                            {
+                                _splits.Add(id);
+                            }
+                        }
                     }
                 }
             }
@@ -89,7 +99,7 @@ namespace DependencyParser.Universal
         /// <param name="comment">Comment to be added.</param>
         public void AddComment(string comment)
         {
-            comments.Add(comment);
+            _comments.Add(comment);
         }
 
         /// <summary>
@@ -99,7 +109,7 @@ namespace DependencyParser.Universal
         public override string ToString()
         {
             var result = "";
-            foreach (var comment in comments)
+            foreach (var comment in _comments)
             {
                 result += comment + "\n";
             }
@@ -111,6 +121,25 @@ namespace DependencyParser.Universal
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Returns number of splits in the sentence
+        /// </summary>
+        /// <returns>Number of splits in the sentence</returns>
+        public int SplitSize()
+        {
+            return _splits.Count;
+        }
+
+        /// <summary>
+        /// Returns the split at position index
+        /// </summary>
+        /// <param name="index">Position</param>
+        /// <returns>The split at position index</returns>
+        public string GetSplit(int index)
+        {
+            return  _splits[index];
         }
 
         /// <summary>
