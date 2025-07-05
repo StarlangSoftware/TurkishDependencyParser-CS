@@ -120,4 +120,19 @@
       </EmbeddedResource>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="tr_imst2-ud-dev.conllu" />
+      <EmbeddedResource Include="tr_imst2-ud-dev.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_imst2-ud-test.conllu" />
+      <EmbeddedResource Include="tr_imst2-ud-test.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="tr_imst2-ud-train.conllu" />
+      <EmbeddedResource Include="tr_imst2-ud-train.conllu">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
 </Project>

@@ -39,7 +39,7 @@ namespace Test
         [Test]
         public void TestDependencyCorpus2()
         {
-            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-dev.conllu");
+            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst2-ud-dev.conllu");
             Assert.AreEqual(1100, corpus.SentenceCount());
             Assert.AreEqual(10542, WordCount(corpus));
             Assert.AreEqual(279, SplitCount(corpus));
@@ -48,7 +48,7 @@ namespace Test
         [Test]
         public void TestDependencyCorpus3()
         {
-            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-test.conllu");
+            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst2-ud-test.conllu");
             Assert.AreEqual(1100, corpus.SentenceCount());
             Assert.AreEqual(10032, WordCount(corpus));
             Assert.AreEqual(278, SplitCount(corpus));
@@ -57,7 +57,7 @@ namespace Test
         [Test]
         public void TestDependencyCorpus4()
         {
-            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst-ud-train.conllu");
+            var corpus = new UniversalDependencyTreeBankCorpus("tr_imst2-ud-train.conllu");
             Assert.AreEqual(3435, corpus.SentenceCount());
             Assert.AreEqual(37522, WordCount(corpus));
             Assert.AreEqual(1082, SplitCount(corpus));
