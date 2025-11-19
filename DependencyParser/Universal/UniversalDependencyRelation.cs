@@ -17,7 +17,7 @@ namespace DependencyParser.Universal
             "NMOD:TMOD", "ADVMOD:EMPH", "AUX:Q", "COMPOUND:LVC",
             "COMPOUND:REDUP", "CSUBJ:COP", "NMOD:COMP", "NMOD:PART",
             "NSUBJ:COP", "OBL:AGENT", "OBL:TMOD", "OBL:NPMOD", "NSUBJ:OUTER",
-            "CSUBJ:OUTER", "ADVCL:RELCL", "NONE"
+            "CSUBJ:OUTER", "ADVCL:RELCL", "OBL:UNMARKED", "NONE"
         };
 
         public static readonly UniversalDependencyType[] UniversalDependencyTags =
@@ -51,7 +51,7 @@ namespace DependencyParser.Universal
             UniversalDependencyType.NSUBJ_COP, UniversalDependencyType.OBL_AGENT, UniversalDependencyType.OBL_TMOD,
             UniversalDependencyType.OBL_NPMOD, UniversalDependencyType.NSUBJ_OUTER,
             UniversalDependencyType.CSUBJ_OUTER, UniversalDependencyType.ADVCL_RELCL,
-            UniversalDependencyType.NONE
+            UniversalDependencyType.OBL_UNMARKED, UniversalDependencyType.NONE
         };
 
         public static readonly string[] UniversalDependencyPosTypes =

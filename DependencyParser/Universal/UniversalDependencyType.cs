@@ -67,6 +67,7 @@ namespace DependencyParser.Universal
         NSUBJ_OUTER,
         CSUBJ_OUTER, 
         ADVCL_RELCL,
+        OBL_UNMARKED,
         NONE
     }
 }
